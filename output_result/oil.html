@@ -1,0 +1,172 @@
+
+<html>
+<body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script src="springy.js"></script>
+<script src="springyui.js"></script>
+<script>
+var graph = new Springy.Graph();
+graph.addNodes(
+'ロシア産原油',
+'価格',
+'１２日',
+'Ｇ７',
+'ＥＵ',
+'対ロ経済制裁',
+'上限',
+'１バレル',
+'６０ドル',
+)
+graph.addEdges(
+['ロシア産原油','価格',{ color:'#00FF00',label:' ',}],
+['価格','１２日',{ color:'#FF0000',label:' ',}],
+['１２日','Ｇ７',{ color:'#000000',label:' ',}],
+['Ｇ７','ＥＵ',{ color:'#000000',label:' ',}],
+['ＥＵ','対ロ経済制裁',{ color:'#0F0000',label:' ',}],
+['対ロ経済制裁','上限',{ color:'#00000F',label:'設けた',}],
+['上限','１バレル',{ color:'#00FF00',label:' ',}],
+['１バレル','６０ドル',{ color:'#000000',label:' ',}],
+)
+graph.addNodes(
+'主要産油国',
+'追加減産',
+'原油相場',
+)
+graph.addEdges(
+['主要産油国','追加減産',{ color:'#00FF00',label:' ',}],
+['追加減産','原油相場',{ color:'#00000F',label:' ',}],
+)
+graph.addNodes(
+'ウクライナ侵攻',
+'戦費',
+'ロシア',
+'原油収入',
+'制裁',
+'効果',
+'恐れ',
+)
+graph.addEdges(
+['ウクライナ侵攻','戦費',{ color:'#00FF00',label:' ',}],
+['戦費','ロシア',{ color:'#0000FF',label:'充てる',}],
+['ロシア','原油収入',{ color:'#00FF00',label:' ',}],
+['原油収入','制裁',{ color:'#FF00FF',label:'抑える',}],
+['制裁','効果',{ color:'#00FF00',label:' ',}],
+['効果','恐れ',{ color:'#FF0000',label:'薄れる',}],
+)
+graph.addNodes(
+'Ｇ７',
+'追加措置',
+'焦点',
+)
+graph.addEdges(
+['Ｇ７','追加措置',{ color:'#FF0000',label:' ',}],
+['追加措置','焦点',{ color:'#0F0000',label:'どう',}],
+)
+graph.addNodes(
+'英調査会社',
+'明らか',
+)
+graph.addEdges(
+['英調査会社','明らか',{ color:'#FF0000',label:' ',}],
+)
+graph.addNodes(
+'ロシア',
+'代表的油種ウラル原油',
+'価格',
+'上限価格',
+'昨年１２月以降',
+'一時４０ドル',
+)
+graph.addEdges(
+['ロシア','代表的油種ウラル原油',{ color:'#00FF00',label:' ',}],
+['代表的油種ウラル原油','価格',{ color:'#00FF00',label:' ',}],
+['価格','上限価格',{ color:'#FF0000',label:' ',}],
+['上限価格','昨年１２月以降',{ color:'#FF0000',label:'設けられた',}],
+['昨年１２月以降','一時４０ドル',{ color:'#000000',label:' ',}],
+)
+graph.addNodes(
+'主要産油国',
+'「ＯＰＥＣプラス」',
+'サウジアラビア',
+'ロシア',
+'追加減産',
+'１２日',
+'６０ドル台',
+)
+graph.addEdges(
+['主要産油国','「ＯＰＥＣプラス」',{ color:'#00000F',label:'つくる',}],
+['「ＯＰＥＣプラス」','サウジアラビア',{ color:'#FF00FF',label:'主導する',}],
+['サウジアラビア','ロシア',{ color:'#000000',label:' ',}],
+['ロシア','追加減産',{ color:'#FF0000',label:' ',}],
+['追加減産','１２日',{ color:'#FF0000',label:'あって持ち直し',}],
+['１２日','６０ドル台',{ color:'#0000FF',label:' ',}],
+)
+graph.addNodes(
+'制裁',
+'ロシア産原油',
+'価格高騰',
+)
+graph.addEdges(
+['制裁','ロシア産原油',{ color:'#FF0000',label:' ',}],
+['ロシア産原油','価格高騰',{ color:'#00FF00',label:' ',}],
+)
+graph.addNodes(
+'６０ドル',
+'価格',
+'原油',
+'海上輸送',
+'必要',
+'保険',
+'契約',
+'柱',
+)
+graph.addEdges(
+['６０ドル','価格',{ color:'#FF00FF',label:'上回る',}],
+['価格','原油',{ color:'#00000F',label:'取引される',}],
+['原油','海上輸送',{ color:'#FF0000',label:' ',}],
+['海上輸送','必要',{ color:'#0000FF',label:' ',}],
+['必要','保険',{ color:'#000000',label:' ',}],
+['保険','契約',{ color:'#00FF00',label:' ',}],
+['契約','柱',{ color:'#FF0000',label:'させない',}],
+)
+graph.addNodes(
+'その後',
+'ガソリン',
+'石油製品',
+)
+graph.addEdges(
+['その後','ガソリン',{ color:'#000000',label:' ',}],
+['ガソリン','石油製品',{ color:'#00FF00',label:' ',}],
+)
+graph.addNodes(
+'上限価格',
+'追加制裁',
+'国',
+'一部',
+'中国',
+'インド',
+'欧州',
+'ロシア',
+'石油',
+)
+graph.addEdges(
+['上限価格','追加制裁',{ color:'#00FF00',label:' ',}],
+['追加制裁','国',{ color:'#0000FF',label:'賛同する',}],
+['国','一部',{ color:'#FF0000',label:' ',}],
+['一部','中国',{ color:'#0000FF',label:'限られ',}],
+['中国','インド',{ color:'#000000',label:' ',}],
+['インド','欧州',{ color:'#FF0000',label:' ',}],
+['欧州','ロシア',{ color:'#0000FF',label:'代わって',}],
+['ロシア','石油',{ color:'#0F0000',label:' ',}],
+)
+
+jQuery(function(){
+var springy = jQuery('#springydemo').springy({
+    graph: graph
+});
+});
+</script>
+
+<canvas id="springydemo" width="1800" height="900" />
+</body>
+</html>
